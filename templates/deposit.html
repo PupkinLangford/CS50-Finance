@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deposit
+{% endblock %}
+
+{% block main %}
+    <form action="/deposit" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="amount" placeholder="Amount" type="number" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Deposit</button>
+    </form>
+    <p>Funds will be requested from the bank account of record. For security reasons we do not allow deposits of more than $100,000, and we do not allow deposits from accounts with cash balances in excess of $1 million. Deposit requests will be rounded to the nearest dollar.</p>
+{% endblock %}
